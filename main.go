@@ -5,6 +5,8 @@ import (
 	"os"
 	"runtime"
 	"strconv"
+
+	"gitlab.com/thesepehrm/random-miner/selector"
 )
 
 func main() {
@@ -16,6 +18,8 @@ func main() {
 	}
 
 	if nodeID, err := strconv.Atoi(os.Args[1]); err == nil {
-		Start(nodeID)
+		selector.Start(nodeID)
+
 	}
+
 }

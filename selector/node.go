@@ -93,7 +93,6 @@ func (node *Node) SendHashedVote() {
 }
 
 func (node *Node) SendVote() {
-	fmt.Printf("sent %d\n", node.randomVote)
 	broadcast(node.GetAddress(), BuildData("sendvote", RandomVote{node.ID, node.randomVote}))
 	fmt.Println("Broadcasted vote!")
 
